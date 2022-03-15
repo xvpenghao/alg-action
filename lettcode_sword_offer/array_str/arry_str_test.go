@@ -7,6 +7,11 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_replaceSpace(t *testing.T) {
+	t.Log(replaceSpaceV2("a b c"))
+	// numList := make([]int, 0, 2) 好处是什么
+}
+
 func Test_binarySearch(t *testing.T) {
 	numList := []int{1, 3, 6, 10, 25, 30}
 	t.Log(binarySearch(numList, 30))
