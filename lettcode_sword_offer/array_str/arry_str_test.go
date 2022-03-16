@@ -7,6 +7,14 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_minArray(t *testing.T) {
+	// t.Log(minArray([]int{2, 2, 2, 0, 1}))
+	// t.Log(minArrayV2([]int{2, 2, 2, 0, 1}))
+	// t.Log(minArrayV2([]int{3, 4, 5, 1, 2}))s
+	t.Log(minArrayV2([]int{6, 1, 2, 3, 4, 5}))
+	// t.Log(minArrayV2([]int{3, 3, 3, 1}))
+}
+
 func Test_replaceSpace(t *testing.T) {
 	t.Log(replaceSpaceV2("a b c"))
 	// numList := make([]int, 0, 2) 好处是什么
