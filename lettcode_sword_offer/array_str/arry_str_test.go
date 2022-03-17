@@ -7,6 +7,11 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_printNumbers(t *testing.T) {
+	t.Log(printNumbers(2))
+
+}
+
 func Test_minArray(t *testing.T) {
 	// t.Log(minArray([]int{2, 2, 2, 0, 1}))
 	// t.Log(minArrayV2([]int{2, 2, 2, 0, 1}))
