@@ -20,6 +20,36 @@ package array_str
 输出：0
 */
 
+/*
+0、首先分析该 旋转数组的特性，
+0、以旋转点为分界线，则两边是有序的，
+0、从有序数组里面查询数值，常用的查找算法就是 【二分查找算法】
+0、核心就是，找到有序的数组的分段，使用二分查找算法找到最小的值
+*/
+func minArrayV3(numbers []int) int {
+	if len(numbers) == 0 {
+		return 0
+	}
+	if len(numbers) == 1 {
+		return numbers[0]
+	}
+	// [4.5,1,2,3]
+	start, end := 0, len(numbers)-1
+	mid := 0
+	for start < end {
+		mid = (start + end) >> 1
+		// 判断中间的值，来缩小判定的范围
+		if numbers[mid] > numbers[end] { // 说明 m在一定在左边，旋转点在[m+1,end]，m可定不是旋转点
+			start = mid + 1
+		} else if numbers[mid] < numbers[end] { // 说明 m一定在 右边 或者本身就是旋转点，旋转点在 [i,m]
+			end = mid
+		} else { // numbers[mid] == numbers[end]  // m在右边[3,1,3,3,3]  m在左边 [3,3,1,3] 不好，判断则所以end的范围
+			end--
+		}
+	}
+	return numbers[start]
+}
+
 func minArrayV2(numbers []int) int {
 	if len(numbers) == 0 {
 		return 0
