@@ -1,15 +1,20 @@
 package array_str
 
 import (
+	"fmt"
 	"testing"
 )
 
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_exchange(t *testing.T) {
+	t.Log(4 & 1) // 100
+	t.Log(3 & 1) // 101
+	fmt.Println(exchangeV3([]int{1, 3, 5}))
+}
 func Test_printNumbers(t *testing.T) {
 	t.Log(printNumbers(2))
-
 }
 
 func Test_minArray(t *testing.T) {
