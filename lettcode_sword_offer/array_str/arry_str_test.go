@@ -7,6 +7,11 @@ import (
 
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
+func Test_minNumber(t *testing.T) {
+	// 3,30,34,5,9
+	t.Log(minNumber([]int{20, 1}))
+	t.Log(minNumber([]int{10, 1}))
+}
 
 func Test_exchange(t *testing.T) {
 	t.Log(4 & 1) // 100
