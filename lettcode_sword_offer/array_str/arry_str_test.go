@@ -7,6 +7,21 @@ import (
 
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
+
+func Test_spiralOrder(t *testing.T) {
+	/*t.Log(spiralOrder([][]int{
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9},
+	}))*/
+	// [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+	t.Log(spiralOrderV2([][]int{
+		{1, 2, 3, 4},
+		{5, 6, 7, 8},
+		{9, 10, 11, 12},
+	}))
+}
+
 func Test_minNumber(t *testing.T) {
 	// 3,30,34,5,9
 	t.Log(minNumber([]int{20, 1}))

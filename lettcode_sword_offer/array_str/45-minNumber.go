@@ -32,7 +32,10 @@ import (
 输出结果可能非常大，所以你需要返回一个字符串而不是整数
 拼接起来的数字可能会有前导 0，最后结果不需要去掉前导 0
 */
-
+// [3,30]
+// x='3',y='30'
+// x+y > y+x, 3 30 > 30 3 则说明  x >y ,则 将 y 与x交换位置即可
+// 问题的核心在于，找出排序的规则。
 func minNumber(nums []int) string {
 	// 自定义排序规则
 	sort.SliceStable(nums, func(i, j int) bool {
