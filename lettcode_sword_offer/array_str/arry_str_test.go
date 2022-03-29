@@ -8,6 +8,11 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_majorityElement(t *testing.T) {
+	t.Log(majorityElementV4([]int{1, 2, 3, 2, 2, 2, 5, 4, 2}))
+	t.Log(majorityElementV4([]int{8, 8, 7, 7, 7}))
+}
+
 func Test_spiralOrder(t *testing.T) {
 	/*t.Log(spiralOrder([][]int{
 		{1, 2, 3},
