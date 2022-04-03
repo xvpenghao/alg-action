@@ -8,6 +8,10 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_missingNumber(t *testing.T) {
+	t.Log(missingNumber([]int{0, 1, 3, 4, 5}))
+}
+
 func Test_search(t *testing.T) {
 	// t.Log(binarySearch2([]int{2, 2}, 3))
 	t.Log(searchV3([]int{-109, -109, -109, 5, 7, 7, 8, 8, 10}, -109))
