@@ -8,6 +8,13 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_getInsertLoc(t *testing.T) {
+	t.Log(twoSum3([]int{10, 26, 30, 31, 47, 60}, 40))
+	t.Log(twoSum3([]int{2, 7, 11, 15}, 9))
+	t.Log(getInsertLoc([]int{2, 7, 11, 15}, 11))
+	t.Log(binarySearch3([]int{2, 7, 11, 15}, 9))
+}
+
 func Test_findContinuousSequence(t *testing.T) {
 	t.Log(findContinuousSequence(15))
 	// t.Log(findContinuousSequence2(15))
