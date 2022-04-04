@@ -8,6 +8,13 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_findContinuousSequence(t *testing.T) {
+	t.Log(findContinuousSequence(15))
+	// t.Log(findContinuousSequence2(15))
+	t.Log(findContinuousSequence3(15))
+	// t.Log(findContinuousSequence(98160))
+}
+
 func Test_missingNumber(t *testing.T) {
 	t.Log(missingNumber([]int{0, 1, 3, 4, 5}))
 }
