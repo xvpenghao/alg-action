@@ -8,6 +8,10 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_reverseWords(t *testing.T) {
+	t.Log(reverseWords("  hello world! "))
+}
+
 func Test_getInsertLoc(t *testing.T) {
 	t.Log(twoSum3([]int{10, 26, 30, 31, 47, 60}, 40))
 	t.Log(twoSum3([]int{2, 7, 11, 15}, 9))
