@@ -8,6 +8,12 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_reverseLeftWords(t *testing.T) {
+	t.Log(reverseLeftWords("abcdefg", 2))
+	t.Log(reverseLeftWords2("abcdefg", 2))
+	t.Log(reverseLeftWords3("abcdefg", 2))
+}
+
 func Test_reverseWords(t *testing.T) {
 	t.Log(reverseWords("  hello world! "))
 }

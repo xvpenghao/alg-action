@@ -21,8 +21,11 @@ package array_str
 [1,2,3,4,5,6]  11,
 */
 
-// 对撞双指针
+// 对撞双指针(尝试并证明他的正确性)
 // 利用数组的升序的特性
+// [10,26,30,31,47,60], target = 40
+// (0,5) > target,就更不用试（i+1,5）了，因为他是，有序递增的数组了，所以此时应该尝试 (0,j-1)
+// (0,5) < target, 用最小的数+最大的数都比target小，所以就应该尝试 (i+1,5)去试探。
 func twoSum3(nums []int, target int) []int {
 	nums = nums[:getInsertLoc(nums, target)]
 	left, right := 0, len(nums)-1
