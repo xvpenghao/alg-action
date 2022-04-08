@@ -8,6 +8,14 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_isStraight(t *testing.T) {
+	t.Log(isStraightV2([]int{0, 0, 2, 2, 5}))
+	t.Log(isStraight([]int{0, 0, 1, 2, 5}))
+	t.Log(isStraight([]int{1, 2, 0, 4, 5}))
+	t.Log(isStraight([]int{0, 0, 2, 2, 5}))
+	t.Log(isStraight([]int{11, 8, 12, 8, 10}))
+}
+
 func Test_reverseLeftWords(t *testing.T) {
 	t.Log(reverseLeftWords("abcdefg", 2))
 	t.Log(reverseLeftWords2("abcdefg", 2))
