@@ -8,6 +8,15 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_strToInt(t *testing.T) {
+	t.Log(strToIntV2("   -42"))
+	t.Log(strToIntV2("+-42"))
+	t.Log(strToIntV2("  +42word 34"))
+	t.Log(strToIntV2("-2147483647"))
+	t.Log(strToInt3("-2147483647"))
+
+}
+
 func Test_constructArr(t *testing.T) {
 	t.Log(constructArr2([]int{1, 2, 3, 4, 5}))
 	t.Log(constructArr([]int{1, 2, 3, 4, 5}))
