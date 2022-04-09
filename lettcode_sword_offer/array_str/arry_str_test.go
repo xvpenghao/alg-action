@@ -8,6 +8,11 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/3/12 11:30
 
+func Test_constructArr(t *testing.T) {
+	t.Log(constructArr2([]int{1, 2, 3, 4, 5}))
+	t.Log(constructArr([]int{1, 2, 3, 4, 5}))
+}
+
 func Test_isStraight(t *testing.T) {
 	t.Log(isStraightV2([]int{0, 0, 2, 2, 5}))
 	t.Log(isStraight([]int{0, 0, 1, 2, 5}))
