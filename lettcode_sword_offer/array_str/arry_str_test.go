@@ -13,7 +13,6 @@ func Test_strToInt(t *testing.T) {
 	t.Log(strToIntV2("+-42"))
 	t.Log(strToIntV2("  +42word 34"))
 	t.Log(strToIntV2("-2147483647"))
-	t.Log(strToInt3("-2147483647"))
 
 }
 
