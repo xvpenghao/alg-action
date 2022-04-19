@@ -5,6 +5,22 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/3/10 19:54
 
+func Test_ConstructorMaxQueue(t *testing.T) {
+	q := ConstructorMaxQueue()
+	q.Push_back(2)
+	q.Push_back(1)
+	q.Push_back(10)
+	q.Push_back(3)
+	q.Push_back(2)
+	t.Log(q.Max_value())
+	t.Log("pop", q.Pop_front())
+	t.Log("pop", q.Pop_front())
+
+	t.Log(q.Max_value())
+	t.Log("pop", q.Pop_front())
+	t.Log(q.Max_value())
+}
+
 func Test_maxSlidingWindow(t *testing.T) {
 	// t.Log(maxSlidingWindowV2([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3))
 	t.Log(maxSlidingWindowV2([]int{7, 2, 4}, 2))
