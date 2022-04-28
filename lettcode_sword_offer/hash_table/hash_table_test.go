@@ -5,6 +5,12 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/4/19 09:01
 
+func Test_lengthOfLongestSubstring(t *testing.T) {
+	t.Log(lengthOfLongestSubstring("abcabcbb"))
+	t.Log(lengthOfLongestSubstring("bbbbb"))
+	t.Log(lengthOfLongestSubstring("pwwkew"))
+}
+
 func Test_findRepeatNumber(t *testing.T) {
 	// t.Log(findRepeatNumber([]int{2, 3, 1, 0, 2, 5, 3}))
 	t.Log(findRepeatNumberV3([]int{2, 3, 1, 0, 2, 5, 3}))
