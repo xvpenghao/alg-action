@@ -5,6 +5,11 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/4/19 09:01
 
+func Test_firstUniqChar(t *testing.T) {
+	t.Log(string(firstUniqChar("dddccdbba")))
+	t.Log(string(firstUniqCharV2("dddccdbba")))
+}
+
 func Test_lengthOfLongestSubstring(t *testing.T) {
 	t.Log(lengthOfLongestSubstring("abcabcbb"))
 	t.Log(lengthOfLongestSubstring("bbbbb"))
