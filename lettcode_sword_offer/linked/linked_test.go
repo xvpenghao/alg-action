@@ -5,6 +5,23 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/5/3 10:54
 
+func Test_reverseList(t *testing.T) {
+	node := reverseList(&ListNode{
+		Val: 1,
+		Next: &ListNode{
+			Val: 2,
+			Next: &ListNode{
+				Val: 3,
+				Next: &ListNode{
+					Val:  4,
+					Next: nil,
+				},
+			},
+		},
+	})
+	t.Log(node)
+}
+
 func Test_getKthFromEnd(t *testing.T) {
 	node := getKthFromEnd(&ListNode{
 		Val: 1,
