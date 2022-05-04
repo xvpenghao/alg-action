@@ -5,6 +5,44 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/5/3 10:54
 
+func Test_getIntersectionNode(t *testing.T) {
+	l1 := &ListNode{
+		Val: 4, Next: &ListNode{
+			Val: 1,
+			Next: &ListNode{
+				Val: 8,
+				Next: &ListNode{
+					Val: 4,
+					Next: &ListNode{
+						Val:  5,
+						Next: nil,
+					},
+				},
+			},
+		},
+	}
+	l2 := &ListNode{
+		Val: 5, Next: &ListNode{
+			Val: 0,
+			Next: &ListNode{
+				Val: 1,
+				Next: &ListNode{
+					Val: 8,
+					Next: &ListNode{
+						Val: 4,
+						Next: &ListNode{
+							Val:  5,
+							Next: nil,
+						},
+					},
+				},
+			},
+		},
+	}
+	node := getIntersectionNode(l1, l2)
+	t.Log(node)
+}
+
 func Test_mergeTwoLists(t *testing.T) {
 	l1 := &ListNode{
 		Val: 1, Next: &ListNode{
