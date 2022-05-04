@@ -28,42 +28,21 @@ package linked
  * }
  */
 
-func reverseListV2(head *ListNode) *ListNode {
+/*
+0、头部节点的下一个为nil
+0、头部节点遍历
+0、头插发
+*/
+func reverseList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
 	}
 	var h *ListNode
 	for head != nil {
-		tmp := head.Next
-		head.Next = h
-		h = head
-		head = tmp
-	}
-	return h
-}
-
-func reverseList(head *ListNode) *ListNode {
-	if head == nil {
-		return nil
-	}
-	// 1-2-3-4-null
-	// 2-next= 1
-	// 1.next = 3
-	// head = 2
-	// head2 = t
-	// 4-3-2-1-null
-	var h *ListNode
-	tail := head
-	head2 := head.Next
-	for head2 != nil {
-		tmp := head2.Next
-
-		tail.Next = head2.Next
-		head2.Next = h
-		h = head2
-
-		tail = tail.Next // 下个尾节点
-		head2 = tmp
+		tmp := head.Next // 保存一个节点
+		head.Next = h    // 头插发
+		h = head         // 重新赋值h
+		head = tmp       // 头节点下一个赋值给 head，接着循环遍历
 	}
 	return h
 }

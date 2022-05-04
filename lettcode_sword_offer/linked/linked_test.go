@@ -5,6 +5,30 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/5/3 10:54
 
+func Test_mergeTwoLists(t *testing.T) {
+	l1 := &ListNode{
+		Val: 1, Next: &ListNode{
+			Val: 2,
+			Next: &ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+	l2 := &ListNode{
+		Val: 1, Next: &ListNode{
+			Val: 3,
+			Next: &ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+
+	node := mergeTwoLists(l1, l2)
+	t.Log(node)
+}
+
 func Test_reverseList(t *testing.T) {
 	node := reverseList(&ListNode{
 		Val: 1,
