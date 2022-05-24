@@ -8,6 +8,25 @@ import (
 // @Author XuPEngHao
 // @DATE 2022/5/7 08:46
 
+func Test_maxDepth(t *testing.T) {
+	root := &TreeNode{
+		Val: 3,
+		Left: &TreeNode{
+			Val: 9,
+		},
+		Right: &TreeNode{
+			Val: 20,
+			Left: &TreeNode{
+				Val: 15,
+			},
+			Right: &TreeNode{
+				Val: 7,
+			},
+		},
+	}
+	t.Log(maxDepth2(root))
+}
+
 func Test_kthLargest(t *testing.T) {
 	root := &TreeNode{
 		Val: 3,
