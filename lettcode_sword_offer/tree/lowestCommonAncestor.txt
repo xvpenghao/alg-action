@@ -10,6 +10,7 @@ class TreeNode:
 
 
 class Solution:
+    # 查询树
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if root is None:
             return None
@@ -22,6 +23,7 @@ class Solution:
                 break
         return root
 
+    # 查询树
     def lowestCommonAncestor2(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if root is None:
             return None
@@ -29,6 +31,15 @@ class Solution:
             return self.lowestCommonAncestor2(root.right, p, q)
         elif root.val > p.val and root.val > q.val:
             return self.lowestCommonAncestor2(root.left, p, q)
+        return root
+
+     # 二叉树
+    def lowestCommonAncestor3(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if not root or root == p or root == q: return root
+        left = self.lowestCommonAncestor3(root.left, p, q)
+        right = self.lowestCommonAncestor3(root.right, p, q)
+        if not left: return right
+        if not right: return left
         return root
 
 
