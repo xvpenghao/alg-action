@@ -5,6 +5,10 @@ import "testing"
 // @Author XuPEngHao
 // @DATE 2022/6/1 10:05
 
+func Test_sumNums(t *testing.T) {
+	t.Log(sumNums(2))
+}
+
 func Test_isSubStructure(t *testing.T) {
 	A := &TreeNode{
 		Val: 1,

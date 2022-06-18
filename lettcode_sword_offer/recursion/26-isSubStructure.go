@@ -43,6 +43,23 @@ B是A的子结构， 即 A中有出现和B相同的结构和节点值。
  *     Right *TreeNode
  * }
  */
+
+func isSubStructureV2(A *TreeNode, B *TreeNode) bool {
+	return (A != nil && B != nil) && (recur(A, B) || isSubStructureV2(A.Left, B) || isSubStructureV2(A.Right, B))
+}
+
+// 比较两个树是否相等
+// 递归的使用思想，确定【终止条件】【返回条件循环添加】
+func recur(A *TreeNode, B *TreeNode) bool {
+	if B == nil { // B已经用尽
+		return true
+	}
+	if A == nil || (A.Val != B.Val) { // A用尽 或者 两者的值不相等则直接返回false
+		return false
+	}
+	return recur(A.Left, B.Left) && recur(A.Right, B.Right)
+}
+
 // 节点的左右页需要对上。
 func isSubStructure(A *TreeNode, B *TreeNode) bool {
 	if B == nil {
