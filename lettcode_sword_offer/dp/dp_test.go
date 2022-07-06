@@ -8,3 +8,7 @@ import "testing"
 func Test_fib(t *testing.T) {
 	t.Log(fib(5))
 }
+
+func Test_numWays(t *testing.T) {
+	t.Log(numWays(7))
+}
