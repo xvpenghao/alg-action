@@ -22,6 +22,9 @@ import "sort"
 */
 
 //  在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内
+// 完成交换-是指 下标和元素之相等
+// 0 1 2 3
+// 0 3 0 1
 func findRepeatNumberV3(nums []int) int { // 当下标和下标相等则i++
 	// 映射
 	i := 0
@@ -33,8 +36,9 @@ func findRepeatNumberV3(nums []int) int { // 当下标和下标相等则i++
 		if nums[nums[i]] == nums[i] { // 数字下标值 == 此时下标值
 			return nums[i]
 		}
-		// 下标值 和 值下标值交互
-		nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+		// 下标值 和 值下标值交互 核心的交换
+		numIndex := nums[i]
+		nums[numIndex], nums[i] = nums[i], nums[numIndex]
 	}
 	return -1
 }
