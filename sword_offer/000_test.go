@@ -7,6 +7,14 @@ import "testing"
 * @Date 2023/6/5 11:04
  */
 
+func Test_011(t *testing.T) {
+	numbers := []int{3, 4, 5, 1, 2}
+	numbers = []int{2, 2, 2, 0, 1}
+	numbers = []int{1, 3, 5}
+	numbers = []int{3, 1, 3, 3}
+	t.Log(minArray(numbers))
+}
+
 func Test_007(t *testing.T) {
 	preorder := []int{3, 9, 20, 15, 7}
 	inorder := []int{9, 3, 15, 20, 7}
