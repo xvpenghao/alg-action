@@ -7,6 +7,14 @@ import "testing"
 * @Date 2023/6/5 11:04
  */
 
+func Test_007(t *testing.T) {
+	preorder := []int{3, 9, 20, 15, 7}
+	inorder := []int{9, 3, 15, 20, 7}
+
+	root := buildTree(preorder, inorder)
+	t.Log(root)
+}
+
 func Test_004(t *testing.T) {
 	matrix := [][]int{
 		{1, 4, 7, 11, 15},
