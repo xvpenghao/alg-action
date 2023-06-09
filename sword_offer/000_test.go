@@ -7,12 +7,18 @@ import "testing"
 * @Date 2023/6/5 11:04
  */
 
+func Test_012(t *testing.T) {
+	board := [][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}
+	t.Log(exist(board, "ABCCED"))
+}
+
 func Test_011(t *testing.T) {
 	numbers := []int{3, 4, 5, 1, 2}
 	numbers = []int{2, 2, 2, 0, 1}
-	numbers = []int{1, 3, 5}
+
 	numbers = []int{3, 1, 3, 3}
-	t.Log(minArray(numbers))
+	numbers = []int{1, 3, 5}
+	t.Log(minArray2(numbers))
 }
 
 func Test_007(t *testing.T) {

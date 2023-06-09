@@ -22,6 +22,43 @@ package sword_offer
 输出：0
 */
 
+// 参考大佬实例在学习一下
+
+// 利用二分查找的思想来思考问题
+// 1,2,3,4,5 之前是个升序数组
+// 3,4,5,1,2 旋转后的,
+
+// 最慢的
+func minArray3(numbers []int) int {
+	for i := range numbers {
+		if i < len(numbers)-1 && numbers[i] > numbers[i+1] {
+			return numbers[i+1]
+		}
+	}
+	return numbers[0]
+}
+
+func minArray2(numbers []int) int {
+	i, j := 0, len(numbers)-1
+	for i < j {
+		mid := (i + j) >> 1
+		if numbers[mid] > numbers[j] { // Mid 一定在 左排序数组中, 旋转点我们让他在右边找 [mid+1,j]
+			i = mid + 1
+		} else if numbers[mid] < numbers[j] { // Mid 一定在有排序数组中，旋转点我们让他在左边找 [i,m]
+			j = mid
+		} else {
+			x := i
+			for k := i + 1; k < j; j++ {
+				if numbers[k] < numbers[x] {
+					x = k
+				}
+			}
+			return numbers[x]
+		}
+	}
+	return numbers[i]
+}
+
 // 1,2,3,4,5 之前是个升序数组
 // 3,4,5,1,2 旋转后的,
 func minArray(numbers []int) int {
