@@ -1,11 +1,18 @@
 package sword_offer
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 /**
 * @Author XuPEngHao
 * @Date 2023/6/5 11:04
  */
+
+func TestName(t *testing.T) {
+	fmt.Println(printNumbers2(4))
+}
 
 func Test_012(t *testing.T) {
 	board := [][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}
