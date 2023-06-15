@@ -1,13 +1,7 @@
-package main
-
-import "fmt"
+package alg_sort
 
 // @Author XuPEngHao
 // @DATE 2022/3/9 09:07
-
-func main() {
-	fmt.Println(bubble([]int{3, 7, 1, 9, 2}))
-}
 
 // 什么叫 冒泡排序,
 // 每一轮的排序，都会确定好这个值的位置

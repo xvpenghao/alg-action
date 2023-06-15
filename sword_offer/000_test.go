@@ -10,7 +10,16 @@ import (
 * @Date 2023/6/5 11:04
  */
 
-func TestName(t *testing.T) {
+// [1,1,0,0,1,0] 排序
+// [1,1,1,0,0,0] 如何排序呢
+func Test_021(t *testing.T) {
+	numsList := []int{1, 1, 4, 8, 7, 20}
+	numsList = []int{1, 1, 4, 8, 7, 20}
+	//numsList = []int{1, 2, 3}
+	t.Log(exchangeV2(numsList))
+}
+
+func Test_017(t *testing.T) {
 	fmt.Println(printNumbers2(4))
 }
 
