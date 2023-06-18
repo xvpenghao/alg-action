@@ -10,6 +10,16 @@ import (
 * @Date 2023/6/5 11:04
  */
 
+func Test_29(t *testing.T) {
+	matrix := [][]int{
+		{1, 2, 3, 4},
+		{5, 6, 7, 8},
+		{9, 10, 11, 12},
+	}
+	result := spiralOrder(matrix)
+	t.Log(result)
+}
+
 // [1,1,0,0,1,0] 排序
 // [1,1,1,0,0,0] 如何排序呢
 func Test_021(t *testing.T) {
