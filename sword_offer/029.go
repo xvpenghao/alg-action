@@ -26,6 +26,13 @@ package sword_offer
 
 // 什么时候我的循环才是结束,结束的条件是什么
 func spiralOrder(matrix [][]int) []int {
+	if len(matrix) == 0 {
+		return []int{}
+	}
+	if len(matrix) == 1 {
+		return matrix[0]
+	}
+
 	result := make([]int, len(matrix)*len(matrix[0]))
 	resIndex := 0
 	left, top, right, below := 0, 0, len(matrix[0])-1, len(matrix)-1

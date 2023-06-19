@@ -10,6 +10,19 @@ import (
 * @Date 2023/6/5 11:04
  */
 
+func Test_031(t *testing.T) {
+	pushed := []int{1, 2, 3, 4, 5}
+	popped := []int{4, 5, 3, 2, 1}
+
+	//pushed = []int{1, 2, 3, 4, 5}
+	//popped = []int{4, 3, 5, 1, 2}
+
+	pushed = []int{1, 0, 2}
+	popped = []int{2, 1, 0}
+
+	t.Log(validateStackSequences(pushed, popped))
+}
+
 func Test_29(t *testing.T) {
 	matrix := [][]int{
 		{1, 2, 3, 4},
