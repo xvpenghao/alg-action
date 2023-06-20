@@ -10,6 +10,11 @@ import (
 * @Date 2023/6/5 11:04
  */
 
+func Test_005(t *testing.T) {
+	s := "We are happy."
+	t.Log(replaceSpace(s))
+}
+
 func Test_039(t *testing.T) {
 	numsList := []int{1, 2, 3, 2, 2, 2, 5, 4, 2}
 	t.Log(majorityElement(numsList))

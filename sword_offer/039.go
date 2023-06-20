@@ -20,6 +20,13 @@ package sword_offer
 */
 
 func majorityElement(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	// 直接不用计算
+	if len(nums) == 1 {
+		return nums[0]
+	}
 	// 以为本身的占比大，所以丢了几个不是问题
 	repeatMaxNum := nums[0]
 	repeatCnt := 0
