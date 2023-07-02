@@ -10,6 +10,14 @@ import (
 * @Date 2023/6/5 11:04
  */
 
+func Test_020(t *testing.T) {
+	t.Log(isNumber("+5"))
+}
+
+func Test_018(t *testing.T) {
+	t.Log(isMatch("aa", "a*"))
+}
+
 func Test_005(t *testing.T) {
 	s := "We are happy."
 	t.Log(replaceSpace(s))
