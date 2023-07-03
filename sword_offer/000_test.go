@@ -10,6 +10,10 @@ import (
 * @Date 2023/6/5 11:04
  */
 
+func Test_038(t *testing.T) {
+	t.Log(permutation("abc"))
+}
+
 func Test_020(t *testing.T) {
 	t.Log(isNumber("+5"))
 }
